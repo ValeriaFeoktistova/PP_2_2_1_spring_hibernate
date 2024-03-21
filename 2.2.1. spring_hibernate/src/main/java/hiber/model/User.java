@@ -19,8 +19,21 @@ public class User {
    @Column(name = "email")
    private String email;
 
-   public User() {}
-   
+   @OneToOne(cascade = CascadeType.ALL)
+   @JoinColumn(name = "model_id") // Имя колонки в таблице User, которая будет ссылаться на Car
+   private Car car;
+
+   public Car getCar() {
+      return car;
+   }
+
+   public void setCar(Car car) {
+      this.car = car;
+   }
+
+   public User() {
+   }
+
    public User(String firstName, String lastName, String email) {
       this.firstName = firstName;
       this.lastName = lastName;
