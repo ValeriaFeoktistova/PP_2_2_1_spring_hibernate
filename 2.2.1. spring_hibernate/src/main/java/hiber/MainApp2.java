@@ -1,4 +1,3 @@
-/*
 package hiber;
 
 import hiber.config.AppConfig;
@@ -59,7 +58,6 @@ public class MainApp2 {
     }
 }
 
-*/
 /*
 1. Нет связи между
         serService.add(new User("User1", "Lastname1", "user1@mail.ru"));
