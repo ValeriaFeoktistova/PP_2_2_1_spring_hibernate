@@ -32,4 +32,10 @@ public class UserServiceImp implements UserService {
       return userDao.findUserByCarModelAndSeries(model, series);
    }
 
+   @Transactional
+   @Override
+   public void updateUser(User user) {
+      userDao.updateUser(user);
+   }
+
 }

@@ -41,9 +41,11 @@ public class MainApp {
            System.out.println("First Name = " + user.getFirstName());
            System.out.println("Last Name = " + user.getLastName());
            System.out.println("Email = " + user.getEmail());
+           System.out.println("Car = " + user.getCar());// это твой вариант!
            System.out.println();
 
-           Car car = user.getCar();
+           */
+/*Car car = user.getCar();                   //это мой вариант!!!
            if (car != null) {
                System.out.println("Model = " + car.getModel());
                System.out.println("Series = " + car.getSeries());
@@ -57,11 +59,12 @@ public class MainApp {
        System.out.println("Получаем юзера, по модели и серии авто:");
        for (User user : usersFind) {
            System.out.println("User: " + user.getFirstName() + ", Car: " + user.getCar().getModel());
-       }
+       }*//*
+
 
        context.close();
    }
-}
+}}
 
 */
 /*
@@ -70,7 +73,9 @@ public class MainApp {
 
         User user1 = new User("Bob", "BobLast", "bob@mail.ru");
 
-        Если уже сохранила юзеров в бд, то вытащи их обратно и раздай им имашины.*//*
+        Если уже сохранила юзеров в бд, то вытащи их обратно и раздай им имашины.
+*//*
+
 
 
 */

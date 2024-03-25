@@ -60,4 +60,12 @@ public class Car {
     public int hashCode() {
         return Objects.hash(id, model, series);
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", series=" + series +
+                '}';
+    }
 }
