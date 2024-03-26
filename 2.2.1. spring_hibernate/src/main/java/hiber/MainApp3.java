@@ -1,4 +1,3 @@
-/*
 package hiber;
 
 import hiber.config.AppConfig;
@@ -11,7 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.sql.SQLException;
 import java.util.List;
 
-public class MainApp2 {
+public class MainApp3 {
     public static void main(String[] args) throws SQLException {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
@@ -26,39 +25,24 @@ public class MainApp2 {
         carService.add(car2);
         carService.add(car3);
 
-        //List<Car> cars = carService.getCars(5);
         List<Car> cars = carService.listCars();
 
-        Car car4 =cars.get(0);
-        Car car5 =cars.get(1);
-        Car car6 =cars.get(2);
+        Car car4 = cars.get(0);
+        Car car5 = cars.get(1);
+        Car car6 = cars.get(2);
 
-        User user1= new User("User1", "Lastname1", "user1@mail.ru",car4);
-        User user2= new User("User2", "Lastname2", "user2@mail.ru",car5);
-        User user3= new User("User3", "Lastname3", "user3@mail.ru",car6);
+        User user1 = new User("User1", "Lastname1", "user1@mail.ru", car4);
+        User user2 = new User("User2", "Lastname2", "user2@mail.ru", car5);
+        User user3 = new User("User3", "Lastname3", "user3@mail.ru", car6);
         userService.add(user1);
         userService.add(user2);
         userService.add(user3);
-        userService.updateUser(user1);
-        List<User> users = userService.listUsers();
-        */
-/*int carIndex = 0;//
-        for (User user : users) {
-            if (carIndex < cars.size()) {
-                user.setCar(cars.get(carIndex)); // Присваиваем автомобиль пользователю
-                userService.add(user);// Обновляем пользователя в базе данных, это метод обязателен????????!!!!
-                // не вижу в нём здесь смысла- без него всё так же работает
-                carIndex++;
-            } else {
-                // Если автомобилей недостаточно, прерываем цикл
-                break;
-            }
-        }*//*
 
-        //List<User> usersFind = userService.findUserByCarModelAndSeries("Model2", 2022);//5. В сервис добавьте метод, который с
+        userService.findUserByCarModelAndSeries("Model2", 2022);//5. В сервис добавьте метод, который с
         // помощью hql-запроса будет доставать юзера, владеющего машиной по ее модели и серии(Получаем юзера,по модели и серии авто)
-
+        List<User> users = userService.listUsers();
         for (User user : users) {
+            System.out.println("----------------------------");
             System.out.println("Id = " + user.getId());
             System.out.println("First Name = " + user.getFirstName());
             System.out.println("Last Name = " + user.getLastName());
@@ -66,8 +50,8 @@ public class MainApp2 {
             System.out.println("Car = " + user.getCar().getModel() + " " + user.getCar().getSeries());
             System.out.println();
 
-            //System.out.println("Получаем юзера, по модели и серии авто:");
-            //System.out.println("User: " + user.getFirstName() + ", Car: " + user.getCar().getModel() + " " + user.getCar().getSeries());
+            System.out.println("Получаем юзера, по модели и серии авто:");
+            System.out.println("User: " + user.getFirstName() + ", Car: " + user.getCar().getModel() + " " + user.getCar().getSeries());
         }
 
         context.close();
@@ -77,7 +61,6 @@ public class MainApp2 {
 
 
 
-*/
 /*
 1. Нет связи между
         serService.add(new User("User1", "Lastname1", "user1@mail.ru"));
@@ -96,7 +79,5 @@ public class MainApp2 {
 
 
 
-*//*
-
-
 */
+

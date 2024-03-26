@@ -1,5 +1,6 @@
 package hiber.dao;
 
+import hiber.model.Car;
 import hiber.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -20,8 +21,6 @@ public class UserDaoImp implements UserDao {
       sessionFactory.getCurrentSession().save(user);
    }
 
-   //public void add(Car car) { sessionFactory.getCurrentSession().save(car);}
-
    @Override
    @SuppressWarnings("unchecked")
    public List<User> listUsers() {
@@ -39,10 +38,10 @@ public class UserDaoImp implements UserDao {
       return query.getResultList();
    }
 
-   @Override
+   /*@Override
    public void updateUser(User user) {
       sessionFactory.getCurrentSession().update(user);
-   }
+   }*/
 
 }
 

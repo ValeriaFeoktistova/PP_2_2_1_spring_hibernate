@@ -1,3 +1,4 @@
+/*
 package hiber;
 
 import hiber.config.AppConfig;
@@ -42,6 +43,7 @@ public class MainApp {
    }
 }
 
+*/
 /*
 1. Нет связи между
         serService.add(new User("User1", "Lastname1", "user1@mail.ru"));
@@ -50,7 +52,9 @@ public class MainApp {
 
         Если уже сохранила юзеров в бд, то вытащи их обратно и раздай им имашины.
 
+*//*
+
+
+
+
 */
-
-
-
